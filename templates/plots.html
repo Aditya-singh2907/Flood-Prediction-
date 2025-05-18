@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FloodML</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/favicon-2.png') }}" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+
+  <body>
+    <!--==========================
+      Header
+    ============================-->
+    <header id="header">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="logo float-left">
+          <a href="{{ url_for('index') }}" class="scrollto">
+            <img style="margin-top:-5px; min-height: 50px;" src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="img-fluid">
+          </a>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="/">Predict</a></li>
+            <li><a href="{{ url_for('plots') }}">Plots</a></li>
+            <li><a href="{{ url_for('heatmaps') }}">Heatmaps</a></li>
+            <li><a href="{{ url_for('satellite') }}">Analysis</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <br /><br /><br /><br /><br />
+
+      <!--==========================
+        Plots Section
+      ============================-->
+      <section id="plots" class="section-bg">
+        <div class="container">
+          <header class="section-header">
+            <h3>Plots</h3>
+          </header>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <img src="{{ url_for('static', filename='img/CD.jpg') }}" class="img-fluid" alt="Class Distribution" />
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <img src="{{ url_for('static', filename='img/CM.jpg') }}" class="img-fluid" alt="Confusion Matrix" />
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <img src="{{ url_for('static', filename='img/KDE.jpg') }}" class="img-fluid" alt="Humidity KDE" />
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <img src="{{ url_for('static', filename='img/precip.jpg') }}" class="img-fluid" alt="Precipitation Distribution" />
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+              <img src="{{ url_for('static', filename='img/roc curve.jpg') }}" class="img-fluid" alt="ROC Curve" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==========================
+      Footer
+    ============================-->
+    <footer id="footer" class="section-bg" style="background-color: #f5f8fd;">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-sm-11">
+                  <div class="footer-info">
+                    <a href="index.html" class="scrollto">
+                      <img style="margin-top: 0px; max-height: 100px;" src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="img-fluid" />
+                    </a>
+                    <p style="padding-top:20px;">
+                      FloodML is a tool that uses Machine Learning and Data Visualization to show you plots and heatmaps with realtime flood information, as well locational predictions about future floods and potential damage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
