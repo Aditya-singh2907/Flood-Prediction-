@@ -62,14 +62,15 @@ This project is ideal for academic research, smart city applications, and early 
 
 ### Libraries & Dependencies:
 
-- `pandas==2.1.1`  
-- `numpy==1.25.2`  
+- `pandas==2.2.3`  
+- `numpy==2.2.6`  
 - `matplotlib==3.7.2`  
 - `seaborn==0.12.2`  
-- `scikit-learn==1.3.0`  
+- `scikit-learn==1.6.1`  
 - `imbalanced-learn==0.10.1`  
 - `joblib==1.3.2`  
-- `flask==2.3.2`  
+- `flask==3.1.1`
+  
 
 
 
